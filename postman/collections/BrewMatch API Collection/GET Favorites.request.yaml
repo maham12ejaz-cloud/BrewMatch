@@ -1,0 +1,12 @@
+$kind: http-request
+description: ""
+url: http://localhost:5000/api/favorites
+method: GET
+body:
+  type: json
+  content: "{\r\n    \"coffee_id\": 1\r\n}"
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_02gc}}"
+order: 9000

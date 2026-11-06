@@ -1,0 +1,986 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+
+  background-color: #faf7f2;
+
+  border-bottom: 1px solid #eee3d7;
+
+  color: #2b1d16;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 9999;
+
+  box-shadow: 0 2px 12px rgba(43, 29, 22, 0.06);
+}
+
+
+/* =========================
+   NAVBAR CONTAINER
+========================= */
+
+.navbar-container {
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 5px 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar-logo {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+}
+
+
+.navbar-logo img {
+  display: block;
+
+  width: auto;
+
+  height: 60px;
+
+  max-width: 200px;
+
+  object-fit: contain;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 26px;
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+.navbar-links a {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 8px 0;
+
+  color: #2b1d16;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =========================
+   NAVIGATION ICON
+========================= */
+
+.nav-icon {
+  width: 17px;
+
+  height: 17px;
+
+  stroke-width: 2;
+
+  flex-shrink: 0;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================
+   NAVIGATION HOVER
+========================= */
+
+.navbar-links a:hover {
+  color: #6f4e37;
+
+  transform: translateY(-1px);
+}
+
+
+.navbar-links a:hover .nav-icon {
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   NAVIGATION ACTIVE
+========================= */
+
+.navbar-links a.active {
+  color: #6f4e37;
+}
+
+
+/* =========================
+   NAVIGATION UNDERLINE
+========================= */
+
+.navbar-links a::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 0;
+
+  width: 0;
+
+  height: 2px;
+
+  background-color: #6f4e37;
+
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+
+.navbar-links a.active::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   AUTH SECTION
+========================================================= */
+
+.navbar-user-section {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.navbar-login-button {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 38px;
+
+  padding: 8px 17px;
+
+  background-color: #6f4e37;
+
+  color: #ffffff;
+
+  border: 1px solid #6f4e37;
+
+  text-decoration: none;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.1px;
+
+  white-space: nowrap;
+
+  flex-shrink: 0;
+
+  box-shadow: 0 3px 8px rgba(111, 78, 55, 0.12);
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.navbar-login-button:hover {
+  background-color: #5d402e;
+
+  border-color: #5d402e;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 5px 12px rgba(111, 78, 55, 0.18);
+}
+
+
+.navbar-login-button.active {
+  background-color: #5d402e;
+
+  border-color: #5d402e;
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   LOGIN ICON
+========================= */
+
+.login-icon {
+  width: 16px;
+
+  height: 16px;
+
+  stroke-width: 2.1;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   PROFILE / USER LINK
+========================================================= */
+
+.navbar-user {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 38px;
+
+  padding: 7px 13px;
+
+  background-color: #f2e8dd;
+
+  color: #5d402e;
+
+  border: 1px solid #e5d7ca;
+
+  border-radius: 20px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================
+   PROFILE HOVER
+========================= */
+
+.navbar-user:hover {
+  background-color: #eadbcd;
+
+  border-color: #d8c4b3;
+
+  color: #4e3527;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 10px rgba(43, 29, 22, 0.08);
+}
+
+
+/* =========================
+   PROFILE ACTIVE
+========================= */
+
+.navbar-user.active {
+  background-color: #6f4e37;
+
+  border-color: #6f4e37;
+
+  color: #ffffff;
+
+  box-shadow: 0 4px 10px rgba(111, 78, 55, 0.16);
+}
+
+
+.navbar-user.active:hover {
+  background-color: #5d402e;
+
+  border-color: #5d402e;
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   USER ICON
+========================= */
+
+.user-icon {
+  width: 16px;
+
+  height: 16px;
+
+  stroke-width: 2.1;
+
+  flex-shrink: 0;
+
+  transition: transform 0.25s ease;
+}
+
+
+.navbar-user:hover .user-icon {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.navbar-logout-button {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 38px;
+
+  padding: 8px 14px;
+
+  background-color: transparent;
+
+  color: #6f4e37;
+
+  border: 1px solid #d8c8ba;
+
+  border-radius: 20px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.navbar-logout-button:hover {
+  background-color: #f0e4d9;
+
+  border-color: #cbb8a8;
+
+  color: #4e3527;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 10px rgba(43, 29, 22, 0.07);
+}
+
+
+/* =========================
+   LOGOUT ICON
+========================= */
+
+.logout-icon {
+  width: 16px;
+
+  height: 16px;
+
+  stroke-width: 2.1;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar-container {
+    padding: 5px 20px;
+  }
+
+
+  .navbar-logo img {
+    height: 52px;
+
+    max-width: 190px;
+  }
+
+
+  .navbar-links {
+    gap: 18px;
+  }
+
+
+  .navbar-links a {
+    font-size: 14px;
+  }
+
+
+  .nav-icon {
+    width: 16px;
+
+    height: 16px;
+  }
+
+
+  .navbar-user-section {
+    gap: 7px;
+  }
+
+
+  .navbar-login-button,
+  .navbar-user,
+  .navbar-logout-button {
+    min-height: 35px;
+
+    font-size: 13px;
+  }
+
+
+  .navbar-login-button {
+    padding: 7px 14px;
+  }
+
+
+  .navbar-user {
+    padding: 6px 11px;
+  }
+
+
+  .navbar-logout-button {
+    padding: 7px 12px;
+  }
+
+
+  .login-icon,
+  .user-icon,
+  .logout-icon {
+    width: 15px;
+
+    height: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .navbar-container {
+    padding: 8px 20px;
+
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+
+  .navbar-logo img {
+    height: 48px;
+
+    max-width: 180px;
+  }
+
+
+  .navbar-links {
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 10px 16px;
+
+    flex-wrap: wrap;
+  }
+
+
+  .navbar-links a {
+    font-size: 14px;
+
+    padding: 5px 0;
+  }
+
+
+  .nav-icon {
+    width: 15px;
+
+    height: 15px;
+  }
+
+
+  .navbar-user-section {
+    justify-content: center;
+
+    gap: 7px;
+
+    width: 100%;
+  }
+
+
+  .navbar-login-button,
+  .navbar-user,
+  .navbar-logout-button {
+    min-height: 34px;
+
+    font-size: 13px;
+  }
+
+
+  .navbar-login-button {
+    padding: 6px 13px;
+  }
+
+
+  .navbar-user {
+    padding: 6px 11px;
+  }
+
+
+  .navbar-logout-button {
+    padding: 6px 12px;
+  }
+
+
+  .login-icon,
+  .user-icon,
+  .logout-icon {
+    width: 15px;
+
+    height: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .navbar-container {
+    padding: 7px 15px;
+  }
+
+
+  .navbar-logo img {
+    height: 45px;
+
+    max-width: 170px;
+  }
+
+
+  .navbar-links {
+    gap: 8px 12px;
+  }
+
+
+  .navbar-links a {
+    font-size: 13px;
+  }
+
+
+  .nav-icon {
+    width: 14px;
+
+    height: 14px;
+  }
+
+
+  .navbar-user-section {
+    gap: 5px;
+  }
+
+
+  .navbar-login-button,
+  .navbar-user,
+  .navbar-logout-button {
+    min-height: 32px;
+
+    font-size: 12px;
+  }
+
+
+  .navbar-login-button {
+    padding: 6px 11px;
+  }
+
+
+  .navbar-user {
+    padding: 5px 9px;
+  }
+
+
+  .navbar-logout-button {
+    padding: 6px 10px;
+  }
+
+
+  .login-icon,
+  .user-icon,
+  .logout-icon {
+    width: 14px;
+
+    height: 14px;
+  }
+
+}
+
+/* =========================================================
+   NAVBAR TOAST NOTIFICATION
+========================================================= */
+
+.navbar-toast {
+  position: fixed;
+
+  top: 90px;
+
+  right: 24px;
+
+  z-index: 10000;
+
+  min-width: 300px;
+
+  max-width: 380px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 16px;
+
+  background-color: #fffdf9;
+
+  border: 1px solid #e5d7ca;
+
+  border-left: 4px solid #6f4e37;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 8px 25px rgba(43, 29, 22, 0.12),
+    0 2px 8px rgba(43, 29, 22, 0.06);
+
+  animation: navbarToastSlideIn 0.3s ease forwards;
+}
+
+
+/* =========================
+   TOAST ICON
+========================= */
+
+.navbar-toast-icon {
+  width: 32px;
+
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #6f4e37;
+
+  background-color: #f2e8dd;
+
+  border-radius: 50%;
+}
+
+
+.navbar-toast-icon svg {
+  width: 18px;
+
+  height: 18px;
+
+  stroke-width: 2.2;
+}
+
+
+/* =========================
+   TOAST CONTENT
+========================= */
+
+.navbar-toast-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.navbar-toast-content strong {
+  display: block;
+
+  color: #2b1d16;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+
+/* =========================
+   TOAST CLOSE BUTTON
+========================= */
+
+.navbar-toast-close {
+  width: 28px;
+
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  background-color: transparent;
+
+  color: #8a7565;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.navbar-toast-close:hover {
+  background-color: #f2e8dd;
+
+  color: #4e3527;
+}
+
+
+.navbar-toast-close svg {
+  width: 16px;
+
+  height: 16px;
+
+  stroke-width: 2;
+}
+
+
+/* =========================
+   TOAST ANIMATION
+========================= */
+
+@keyframes navbarToastSlideIn {
+
+  from {
+    opacity: 0;
+
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+
+}
+
+
+/* =========================================================
+   TOAST - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar-toast {
+    top: 80px;
+
+    right: 18px;
+
+    min-width: 280px;
+
+    max-width: 350px;
+
+    padding: 13px 14px;
+  }
+
+
+  .navbar-toast-content strong {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   TOAST - MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .navbar-toast {
+    top: 145px;
+
+    right: 15px;
+
+    left: 15px;
+
+    min-width: 0;
+
+    max-width: none;
+
+    width: auto;
+  }
+
+}
+
+
+/* =========================================================
+   TOAST - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .navbar-toast {
+    top: 135px;
+
+    right: 12px;
+
+    left: 12px;
+
+    padding: 12px 13px;
+
+    gap: 10px;
+  }
+
+
+  .navbar-toast-icon {
+    width: 30px;
+
+    height: 30px;
+  }
+
+
+  .navbar-toast-icon svg {
+    width: 17px;
+
+    height: 17px;
+  }
+
+
+  .navbar-toast-content strong {
+    font-size: 12px;
+  }
+
+
+  .navbar-toast-close {
+    width: 26px;
+
+    height: 26px;
+  }
+
+}

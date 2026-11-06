@@ -1,0 +1,23 @@
+.custom-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+
+  background-color: #6f4e37;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #5a3d2b;
+  transform: translateY(-2px);
+}
+
+.custom-button:active {
+  transform: translateY(0);
+}

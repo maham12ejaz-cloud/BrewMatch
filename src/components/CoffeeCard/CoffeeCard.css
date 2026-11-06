@@ -1,0 +1,150 @@
+
+.coffee-card {
+  width: 100%;
+  max-width: 380px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eee3d7;
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 25px rgba(43, 29, 22, 0.08);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.coffee-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 14px 30px rgba(43, 29, 22, 0.12);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.coffee-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  background-color: #f3ece4;
+}
+
+.coffee-card-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.4s ease;
+}
+
+.coffee-card:hover .coffee-card-image img {
+  transform: scale(1.03);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.coffee-card-content {
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.coffee-card-content h3 {
+  margin: 0 0 10px;
+
+  color: #2b1d16;
+
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.coffee-description {
+  margin: 0 0 20px;
+
+  color: #6b5a50;
+
+  font-size: 15px;
+  line-height: 1.6;
+
+  flex: 1;
+}
+
+
+/* =========================
+   COFFEE INFO
+========================= */
+
+.coffee-card-info {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.coffee-card-info span:first-child {
+  color: #6b5a50;
+
+  font-size: 14px;
+}
+
+.coffee-card-info span:last-child {
+  color: #6f4e37;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.coffee-card .custom-button {
+  width: 100%;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .coffee-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .coffee-card-content {
+    padding: 18px;
+  }
+
+  .coffee-card-content h3 {
+    font-size: 21px;
+  }
+
+  .coffee-description {
+    font-size: 14px;
+  }
+}

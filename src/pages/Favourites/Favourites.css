@@ -1,0 +1,524 @@
+
+.favorites-page {
+  min-height: 80vh;
+  padding: 70px 20px;
+  background-color: #f8f4ef;
+}
+
+.favorites-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* ========================= */
+/* Page Header */
+/* ========================= */
+
+.favorites-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.favorites-header > span {
+  color: #6f4e37;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+/* ========================= */
+/* Favorites Title */
+/* ========================= */
+
+.favorites-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 10px 0 12px;
+}
+
+.favorites-title h1 {
+  margin: 0;
+  color: #2b1d16;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.favorites-title-icon {
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  color: #6f4e37;
+  stroke-width: 2;
+}
+
+.favorites-header p {
+  color: #6b5a50;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* ========================= */
+/* Favorites Grid */
+/* ========================= */
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+/* ========================= */
+/* Favorite Card */
+/* ========================= */
+
+.favorite-card {
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #eee3d7;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(43, 29, 22, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.favorite-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(43, 29, 22, 0.11);
+}
+
+
+/* ========================= */
+/* Favorite Image */
+/* ========================= */
+
+.favorite-image {
+  width: 100%;
+  height: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f8f4ef;
+  overflow: hidden;
+}
+
+.favorite-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: contain;
+
+  transition: transform 0.3s ease;
+}
+
+.favorite-card:hover .favorite-image img {
+  transform: scale(1.04);
+}
+
+
+/* ========================= */
+/* Favorite Content */
+/* ========================= */
+
+.favorite-content {
+  padding: 22px;
+}
+
+.favorite-content h2 {
+  color: #2b1d16;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.favorite-content p {
+  min-height: 50px;
+
+  color: #7a6a60;
+  font-size: 14px;
+  line-height: 1.6;
+
+  margin-bottom: 18px;
+}
+
+
+/* ========================= */
+/* Coffee Information */
+/* ========================= */
+
+.favorite-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #eee3d7;
+}
+
+.favorite-info span {
+  padding: 6px 10px;
+
+  background-color: #f1e5d8;
+  border-radius: 7px;
+
+  color: #6f4e37;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.favorite-info strong {
+  color: #6f4e37;
+  font-size: 19px;
+}
+
+
+/* ========================= */
+/* Actions */
+/* ========================= */
+
+.favorite-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.favorite-actions a {
+  flex: 1;
+  text-decoration: none;
+}
+
+
+/* ========================= */
+/* View Details Button */
+/* ========================= */
+
+.view-favorite-button {
+  width: 100%;
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 14px;
+
+  border: 1px solid #6f4e37;
+  border-radius: 9px;
+
+  background-color: #6f4e37;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.view-favorite-button:hover {
+  background-color: #5a3d2b;
+  border-color: #5a3d2b;
+  transform: translateY(-2px);
+}
+
+
+/* ========================= */
+/* Remove Favorite Button */
+/* ========================= */
+
+.remove-favorite-button {
+  flex: 1;
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+  padding: 0 14px;
+
+  border: 1px solid #e2cfc1;
+  border-radius: 9px;
+
+  background-color: transparent;
+  color: #8a5a45;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.remove-favorite-button svg {
+  width: 16px;
+  height: 16px;
+
+  flex-shrink: 0;
+
+  stroke-width: 2;
+}
+
+.remove-favorite-button:hover {
+  background-color: #f8eee8;
+  border-color: #b8785c;
+  color: #7a3f2b;
+
+  transform: translateY(-2px);
+}
+
+.remove-favorite-button:active {
+  transform: translateY(0);
+}
+
+
+/* ========================= */
+/* Empty Favorites */
+/* ========================= */
+
+.empty-favorites {
+  width: 100%;
+  max-width: 650px;
+
+  margin: 50px auto;
+  padding: 70px 30px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eee3d7;
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 35px rgba(43, 29, 22, 0.08);
+}
+
+
+/* ========================= */
+/* Empty Favorites Icon */
+/* ========================= */
+
+.empty-favorites-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f1e5d8;
+  border-radius: 50%;
+
+  color: #6f4e37;
+}
+
+.empty-favorites-icon svg {
+  width: 32px;
+  height: 32px;
+
+  stroke-width: 1.8;
+}
+
+
+/* ========================= */
+/* Empty Favorites Content */
+/* ========================= */
+
+.empty-favorites h1 {
+  color: #2b1d16;
+  font-size: 30px;
+
+  margin-bottom: 12px;
+}
+
+.empty-favorites p {
+  color: #6b5a50;
+  font-size: 16px;
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+
+/* ========================= */
+/* Explore Coffees Button */
+/* ========================= */
+
+.browse-favorites-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 12px 24px;
+
+  border: 1px solid #6f4e37;
+  border-radius: 10px;
+
+  background-color: #6f4e37;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.browse-favorites-button svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.browse-favorites-button:hover {
+  background-color: #5a3d2b;
+  border-color: #5a3d2b;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 15px rgba(43, 29, 22, 0.12);
+}
+
+.browse-favorites-button:active {
+  transform: translateY(0);
+}
+
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+  .favorites-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+  .favorites-page {
+    padding: 50px 15px;
+  }
+
+  .favorites-title h1 {
+    font-size: 32px;
+  }
+
+  .favorites-title-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .favorites-header p {
+    font-size: 14px;
+  }
+
+  .favorites-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .favorite-image {
+    height: 230px;
+  }
+
+}
+
+
+/* ========================= */
+/* Small Mobile */
+/* ========================= */
+
+@media (max-width: 450px) {
+
+  .favorites-page {
+    padding: 40px 15px;
+  }
+
+  .favorites-title {
+    gap: 7px;
+  }
+
+  .favorites-title h1 {
+    font-size: 28px;
+  }
+
+  .favorites-title-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .favorites-header {
+    margin-bottom: 30px;
+  }
+
+  .favorite-content {
+    padding: 18px;
+  }
+
+  .favorite-actions {
+    flex-direction: column;
+  }
+
+  .view-favorite-button,
+  .remove-favorite-button {
+    width: 100%;
+  }
+
+  .empty-favorites {
+    margin: 30px auto;
+    padding: 50px 20px;
+  }
+
+  .empty-favorites h1 {
+    font-size: 26px;
+  }
+
+}
+
+
+/* ========================= */
+/* Reduced Motion */
+/* ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .favorite-card,
+  .favorite-image img,
+  .view-favorite-button,
+  .remove-favorite-button,
+  .browse-favorites-button {
+    transition: none;
+  }
+
+}

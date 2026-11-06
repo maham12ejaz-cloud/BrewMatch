@@ -1,0 +1,20 @@
+$kind: http-request
+description: ""
+url: http://localhost:5000/api/users/profile
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Maham Updated\",\r
+
+    \  \"email\": \"test@example.com\",\r
+
+    \  \"phone\": \"03001234567\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0n4d}}"
+order: 17000

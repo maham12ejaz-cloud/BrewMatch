@@ -1,0 +1,28 @@
+$kind: http-request
+description: ""
+url: http://localhost:5000/api/coffees
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"Almond Latte\",\r
+
+    \    \"description\": \"A smooth coffee with almond flavor.\",\r
+
+    \    \"price\": 580,\r
+
+    \    \"image\": \"/images/almond-latte.jpg\",\r
+
+    \    \"strength\": \"Medium\",\r
+
+    \    \"taste\": \"Nutty\",\r
+
+    \    \"milk\": \"Milk\",\r
+
+    \    \"temperature\": \"Hot\",\r
+
+    \    \"sweetness\": \"Slightly Sweet\"\r
+
+    }\r\n"
+order: 2000

@@ -1,0 +1,312 @@
+
+/* =========================
+   COFFEES PAGE
+========================= */
+
+.coffees-page {
+  min-height: 100vh;
+
+  padding: 75px 20px;
+
+  background-color: #f8f4ef;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.coffees-container {
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.coffees-header {
+  text-align: center;
+
+  max-width: 700px;
+
+  margin: 0 auto 55px;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.coffees-label {
+  display: inline-block;
+
+  padding: 7px 15px;
+
+  margin-bottom: 16px;
+
+  background-color: #f1e5d8;
+
+  color: #6f4e37;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.coffees-header h1 {
+  margin: 0 0 15px;
+
+  color: #2b1d16;
+
+  font-size: 44px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.coffees-header p {
+  margin: 0 auto;
+
+  color: #6b5a50;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   COFFEE COUNT
+========================= */
+
+.coffee-count {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 22px;
+
+  padding: 9px 16px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eee3d7;
+
+  border-radius: 30px;
+
+  box-shadow: 0 5px 18px rgba(43, 29, 22, 0.05);
+}
+
+.coffee-count strong {
+  color: #6f4e37;
+
+  font-size: 16px;
+}
+
+.coffee-count span {
+  color: #7a6a60;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   COFFEE GRID
+========================= */
+
+.coffees-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  align-items: stretch;
+}
+
+
+/* =========================
+   CARD ANIMATION
+========================= */
+
+.coffees-grid .coffee-card {
+  animation: coffeeCardFadeIn 0.5s ease both;
+}
+
+.coffees-grid .coffee-card:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+.coffees-grid .coffee-card:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+.coffees-grid .coffee-card:nth-child(4) {
+  animation-delay: 0.15s;
+}
+
+.coffees-grid .coffee-card:nth-child(5) {
+  animation-delay: 0.2s;
+}
+
+.coffees-grid .coffee-card:nth-child(6) {
+  animation-delay: 0.25s;
+}
+
+.coffees-grid .coffee-card:nth-child(7) {
+  animation-delay: 0.3s;
+}
+
+.coffees-grid .coffee-card:nth-child(8) {
+  animation-delay: 0.35s;
+}
+
+.coffees-grid .coffee-card:nth-child(9) {
+  animation-delay: 0.4s;
+}
+
+@keyframes coffeeCardFadeIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+
+  .coffees-page {
+    padding: 60px 20px;
+  }
+
+  .coffees-header {
+    margin-bottom: 45px;
+  }
+
+  .coffees-header h1 {
+    font-size: 38px;
+  }
+
+  .coffees-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .coffees-page {
+    padding: 45px 15px;
+  }
+
+  .coffees-header {
+    margin-bottom: 35px;
+  }
+
+  .coffees-label {
+    font-size: 12px;
+
+    padding: 6px 13px;
+  }
+
+  .coffees-header h1 {
+    font-size: 31px;
+
+    margin-bottom: 12px;
+  }
+
+  .coffees-header p {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+  .coffee-count {
+    margin-top: 18px;
+
+    padding: 8px 14px;
+  }
+
+  .coffee-count strong {
+    font-size: 15px;
+  }
+
+  .coffee-count span {
+    font-size: 13px;
+  }
+
+  .coffees-grid {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .coffees-header h1 {
+    font-size: 28px;
+  }
+
+  .coffees-header p {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .coffees-grid .coffee-card {
+    animation: none;
+  }
+}

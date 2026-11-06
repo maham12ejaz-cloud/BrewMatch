@@ -1,0 +1,115 @@
+
+/* =========================
+   LOADING CONTAINER
+========================= */
+
+.loading-container {
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  text-align: center;
+
+  background-color: #f8f4ef;
+}
+
+
+/* =========================
+   LOADING SPINNER
+========================= */
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+
+  border: 4px solid #e8ddd2;
+  border-top-color: #6f4e37;
+
+  border-radius: 50%;
+
+  animation: loadingSpin 0.9s linear infinite;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.loading-container h2 {
+  margin: 0 0 10px;
+
+  color: #2b1d16;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.loading-container p {
+  margin: 0;
+
+  max-width: 450px;
+
+  color: #6b5a50;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   SPINNER ANIMATION
+========================= */
+
+@keyframes loadingSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .loading-container {
+    min-height: 50vh;
+
+    padding: 30px 15px;
+  }
+
+  .loading-spinner {
+    width: 44px;
+    height: 44px;
+
+    border-width: 3px;
+
+    margin-bottom: 20px;
+  }
+
+  .loading-container h2 {
+    font-size: 21px;
+  }
+
+  .loading-container p {
+    font-size: 14px;
+  }
+}

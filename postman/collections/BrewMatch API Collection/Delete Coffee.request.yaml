@@ -1,0 +1,5 @@
+$kind: http-request
+description: ""
+url: http://localhost:5000/api/coffees/16
+method: DELETE
+order: 4000

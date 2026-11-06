@@ -1,0 +1,260 @@
+.cart-item {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 90px 1fr auto auto auto;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 18px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eee3d7;
+
+  border-radius: 14px;
+
+  box-shadow: 0 5px 18px rgba(43, 29, 22, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 22px rgba(43, 29, 22, 0.09);
+}
+
+/* ========================= */
+/* Coffee Image */
+/* ========================= */
+
+.cart-item-image {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f8f4ef;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.cart-item-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* ========================= */
+/* Coffee Information */
+/* ========================= */
+
+.cart-item-info {
+  min-width: 0;
+}
+
+.cart-item-info h3 {
+  color: #2b1d16;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  margin-bottom: 7px;
+}
+
+.cart-item-info p {
+  color: #8a786c;
+
+  font-size: 14px;
+}
+
+/* ========================= */
+/* Quantity Controls */
+/* ========================= */
+
+.cart-item-quantity {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.cart-item-quantity button {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #d8c8b8;
+
+  border-radius: 8px;
+
+  background-color: #faf7f2;
+
+  color: #6f4e37;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.cart-item-quantity button:hover {
+  background-color: #f1e5d8;
+
+  border-color: #6f4e37;
+}
+
+.cart-item-quantity span {
+  min-width: 25px;
+
+  text-align: center;
+
+  color: #2b1d16;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ========================= */
+/* Total Price */
+/* ========================= */
+
+.cart-item-total {
+  min-width: 80px;
+
+  color: #6f4e37;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  text-align: right;
+}
+
+/* ========================= */
+/* Remove Button */
+/* ========================= */
+
+.cart-item-remove {
+  padding: 9px 14px;
+
+  border: 1px solid #e2cfc1;
+
+  border-radius: 8px;
+
+  background-color: transparent;
+
+  color: #8a5a45;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.cart-item-remove:hover {
+  background-color: #f8eee8;
+
+  border-color: #b8785c;
+
+  color: #7a3f2b;
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media (max-width: 900px) {
+  .cart-item {
+    grid-template-columns: 80px 1fr auto;
+
+    gap: 15px;
+  }
+
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cart-item-quantity {
+    grid-column: 2;
+  }
+
+  .cart-item-total {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .cart-item-remove {
+    grid-column: 2 / 4;
+
+    width: fit-content;
+  }
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media (max-width: 600px) {
+  .cart-item {
+    grid-template-columns: 70px 1fr;
+
+    gap: 15px;
+
+    padding: 15px;
+  }
+
+  .cart-item-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cart-item-info h3 {
+    font-size: 16px;
+  }
+
+  .cart-item-info p {
+    font-size: 13px;
+  }
+
+  .cart-item-quantity {
+    grid-column: 1 / -1;
+  }
+
+  .cart-item-total {
+    grid-column: 1 / -1;
+
+    text-align: left;
+
+    font-size: 16px;
+  }
+
+  .cart-item-remove {
+    grid-column: 1 / -1;
+
+    width: 100%;
+  }
+}

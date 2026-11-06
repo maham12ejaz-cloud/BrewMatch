@@ -1,0 +1,1675 @@
+/* =========================
+   ADMIN COFFEES PAGE
+========================= */
+
+.admin-coffees-page {
+    min-height: 100vh;
+
+    padding: 45px 40px 70px;
+
+    background-color: #f8f4ef;
+
+    color: #2b1d16;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.admin-coffees-header {
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto 28px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* =========================
+   HEADER TEXT
+========================= */
+
+.admin-coffees-label {
+    margin: 0 0 8px;
+
+    color: #a2765d;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+
+    text-transform: uppercase;
+}
+
+.admin-coffees-header h1 {
+    margin: 0;
+
+    color: #2b1d16;
+
+    font-size: 31px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+.admin-coffees-description {
+    margin: 8px 0 0;
+
+    color: #806f66;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ADD COFFEE BUTTON
+========================= */
+
+.admin-add-coffee-button {
+    min-height: 45px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #6e4937;
+
+    color: #ffffff;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 12px rgba(110, 73, 55, 0.18);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-add-coffee-button:hover {
+    background-color: #583a2c;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 16px rgba(110, 73, 55, 0.23);
+}
+
+.admin-add-coffee-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   ALERTS
+========================= */
+
+.admin-coffees-alert {
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto 20px;
+
+    padding: 12px 14px;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.admin-coffees-alert.success {
+    border: 1px solid #cfe5d2;
+
+    background-color: #f1f9f2;
+
+    color: #4c8057;
+}
+
+.admin-coffees-alert.error {
+    border: 1px solid #efd1ca;
+
+    background-color: #fff4f2;
+
+    color: #a24e42;
+}
+
+.admin-coffees-alert button {
+    width: 28px;
+
+    height: 28px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: currentColor;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.admin-coffees-alert button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   SEARCH / FILTER CONTROLS
+========================= */
+
+.admin-coffees-controls {
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto 15px;
+
+    padding: 15px;
+
+    border: 1px solid #eadfd5;
+
+    border-radius: 14px;
+
+    background-color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    box-shadow:
+        0 4px 18px rgba(43, 29, 22, 0.035);
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.admin-coffees-search {
+    min-width: 240px;
+
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #ded2c9;
+
+    border-radius: 9px;
+
+    background-color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-coffees-search svg {
+    color: #9a7c6b;
+
+    flex-shrink: 0;
+}
+
+.admin-coffees-search:focus-within {
+    border-color: #a2765d;
+
+    box-shadow:
+        0 0 0 3px rgba(162, 118, 93, 0.1);
+}
+
+.admin-coffees-search input {
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #2b1d16;
+
+    font-family: inherit;
+
+    font-size: 13px;
+}
+
+.admin-coffees-search input::placeholder {
+    color: #b0a199;
+}
+
+
+/* =========================
+   FILTER LABEL
+========================= */
+
+.admin-coffees-filter-icon {
+    height: 42px;
+
+    padding: 0 4px 0 8px;
+
+    color: #76594a;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   SELECTS
+========================= */
+
+.admin-coffees-controls select,
+.admin-coffees-sort select {
+    height: 42px;
+
+    padding: 0 32px 0 11px;
+
+    border: 1px solid #ded2c9;
+
+    border-radius: 9px;
+
+    background-color: #ffffff;
+
+    color: #4b382f;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-coffees-controls select:focus,
+.admin-coffees-sort select:focus {
+    border-color: #a2765d;
+
+    box-shadow:
+        0 0 0 3px rgba(162, 118, 93, 0.08);
+}
+
+
+/* =========================
+   SORT ROW
+========================= */
+
+.admin-coffees-sort-row {
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* =========================
+   RESULT COUNT
+========================= */
+
+.admin-coffees-result-count {
+    color: #806f66;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.admin-coffees-result-count svg {
+    color: #a2765d;
+}
+
+
+/* =========================
+   SORT
+========================= */
+
+.admin-coffees-sort {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #806f66;
+
+    font-size: 12px;
+}
+
+.admin-coffees-sort > svg {
+    color: #9a7c6b;
+}
+
+
+/* =========================
+   SORT DIRECTION
+========================= */
+
+.admin-sort-direction {
+    height: 42px;
+
+    padding: 0 11px;
+
+    border: 1px solid #ded2c9;
+
+    border-radius: 9px;
+
+    background-color: #ffffff;
+
+    color: #6e4937;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.admin-sort-direction:hover {
+    border-color: #cbb8aa;
+
+    background-color: #faf6f2;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+.admin-reset-filters {
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background-color: #f1e9e2;
+
+    color: #6e4937;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease;
+}
+
+.admin-reset-filters:hover {
+    background-color: #e7d9cf;
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.admin-coffees-card {
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    border: 1px solid #eadfd5;
+
+    border-radius: 15px;
+
+    background-color: #ffffff;
+
+    box-shadow:
+        0 6px 22px rgba(43, 29, 22, 0.045);
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   TABLE WRAPPER
+========================= */
+
+.admin-coffees-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.admin-coffees-table {
+    width: 100%;
+
+    min-width: 1050px;
+
+    border-collapse: collapse;
+}
+
+.admin-coffees-table thead {
+    background-color: #faf7f3;
+}
+
+.admin-coffees-table th {
+    padding: 15px 16px;
+
+    border-bottom: 1px solid #eee5de;
+
+    color: #806f66;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+.admin-coffees-table td {
+    padding: 15px 16px;
+
+    border-bottom: 1px solid #f0e9e3;
+
+    color: #625148;
+
+    font-size: 12px;
+
+    vertical-align: middle;
+}
+
+.admin-coffees-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-coffees-table tbody tr {
+    transition:
+        background-color 0.15s ease;
+}
+
+.admin-coffees-table tbody tr:hover {
+    background-color: #fdfbf9;
+}
+
+
+/* =========================
+   COFFEE NAME CELL
+========================= */
+
+.admin-coffee-name-cell {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    min-width: 180px;
+}
+
+
+/* =========================
+   COFFEE IMAGE
+========================= */
+
+.admin-coffee-image {
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background-color: #f2e8df;
+
+    color: #8a614b;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.admin-coffee-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================
+   COFFEE NAME
+========================= */
+
+.admin-coffee-name-cell > div:last-child {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.admin-coffee-name-cell strong {
+    color: #33241d;
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    white-space: nowrap;
+}
+
+.admin-coffee-name-cell span {
+    color: #a08f85;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.admin-coffee-price {
+    color: #6e4937;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   BADGE
+========================= */
+
+.admin-coffee-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 25px;
+
+    padding: 0 9px;
+
+    border-radius: 20px;
+
+    background-color: #f2e8df;
+
+    color: #79533f;
+
+    font-size: 10px;
+
+    font-weight: 650;
+
+    white-space: nowrap;
+}
+
+.admin-coffee-badge.strength-strong {
+    background-color: #eee0d8;
+
+    color: #714331;
+}
+
+.admin-coffee-badge.strength-medium {
+    background-color: #f3eade;
+
+    color: #806044;
+}
+
+.admin-coffee-badge.strength-light {
+    background-color: #f5efe9;
+
+    color: #8a7567;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.admin-coffee-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.admin-coffee-actions button {
+    width: 34px;
+
+    height: 34px;
+
+    padding: 0;
+
+    border: 1px solid transparent;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.admin-edit-button {
+    background-color: #f3ebe5;
+
+    color: #75533f;
+}
+
+.admin-edit-button:hover {
+    border-color: #d9c6b8;
+
+    background-color: #eaded5;
+}
+
+.admin-delete-button {
+    background-color: #fff2ef;
+
+    color: #a24e42;
+}
+
+.admin-delete-button:hover {
+    border-color: #efd1ca;
+
+    background-color: #fde6e2;
+}
+
+.admin-coffee-actions button:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.admin-coffees-loading {
+    min-height: 350px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #806f66;
+
+    font-size: 13px;
+}
+
+.admin-loading-icon {
+    animation: adminCoffeeSpin 1s linear infinite;
+}
+
+@keyframes adminCoffeeSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.admin-coffees-empty {
+    min-height: 350px;
+
+    padding: 40px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.admin-empty-icon {
+    width: 58px;
+
+    height: 58px;
+
+    margin-bottom: 14px;
+
+    border-radius: 16px;
+
+    background-color: #f2e8df;
+
+    color: #79533f;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.admin-coffees-empty h3 {
+    margin: 0;
+
+    color: #3b2a22;
+
+    font-size: 17px;
+
+    font-weight: 650;
+}
+
+.admin-coffees-empty p {
+    margin: 7px 0 16px;
+
+    color: #95857b;
+
+    font-size: 12px;
+}
+
+.admin-coffees-empty button {
+    min-height: 38px;
+
+    padding: 0 14px;
+
+    border: 1px solid #ded2c9;
+
+    border-radius: 8px;
+
+    background-color: #ffffff;
+
+    color: #6e4937;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.admin-coffees-empty button:hover {
+    background-color: #faf6f2;
+}
+
+
+/* =========================
+   MODAL OVERLAY
+========================= */
+
+.admin-coffee-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    padding: 30px;
+
+    background-color: rgba(43, 29, 22, 0.42);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow-y: auto;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.admin-coffee-modal {
+    width: min(680px, 100%);
+
+    max-height: calc(100vh - 60px);
+
+    border: 1px solid #eadfd5;
+
+    border-radius: 17px;
+
+    background-color: #ffffff;
+
+    box-shadow:
+        0 20px 55px rgba(43, 29, 22, 0.18);
+
+    overflow-y: auto;
+}
+
+
+/* =========================
+   MODAL HEADER
+========================= */
+
+.admin-coffee-modal-header {
+    padding: 22px 25px;
+
+    border-bottom: 1px solid #eee5de;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.admin-coffee-modal-header p {
+    margin: 0 0 5px;
+
+    color: #a2765d;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.admin-coffee-modal-header h2 {
+    margin: 0;
+
+    color: #2b1d16;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+.admin-coffee-modal-header > button {
+    width: 34px;
+
+    height: 34px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #f5eee8;
+
+    color: #75533f;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.admin-coffee-modal-header > button:hover {
+    background-color: #eaded5;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.admin-coffee-form {
+    padding: 25px;
+}
+
+
+/* =========================
+   MODAL ERROR
+========================= */
+
+.admin-coffee-modal-error {
+    margin-bottom: 20px;
+
+    padding: 11px 13px;
+
+    border: 1px solid #efd1ca;
+
+    border-radius: 8px;
+
+    background-color: #fff4f2;
+
+    color: #a24e42;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FORM GRID
+========================= */
+
+.admin-coffee-form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.admin-coffee-field {
+    min-width: 0;
+}
+
+.admin-coffee-field-full {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================
+   FORM LABEL
+========================= */
+
+.admin-coffee-field label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #3b2a22;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   FORM INPUTS
+========================= */
+
+.admin-coffee-field input,
+.admin-coffee-field textarea,
+.admin-coffee-field select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #ded2c9;
+
+    border-radius: 9px;
+
+    background-color: #ffffff;
+
+    color: #2b1d16;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-coffee-field input,
+.admin-coffee-field select {
+    height: 44px;
+
+    padding: 0 12px;
+}
+
+.admin-coffee-field textarea {
+    min-height: 85px;
+
+    padding: 11px 12px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+.admin-coffee-field input::placeholder,
+.admin-coffee-field textarea::placeholder {
+    color: #b0a199;
+}
+
+.admin-coffee-field input:focus,
+.admin-coffee-field textarea:focus,
+.admin-coffee-field select:focus {
+    border-color: #a2765d;
+
+    box-shadow:
+        0 0 0 3px rgba(162, 118, 93, 0.1);
+}
+
+
+/* =========================
+   MODAL ACTIONS
+========================= */
+
+.admin-coffee-modal-actions {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eee5de;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+}
+
+
+/* =========================
+   CANCEL
+========================= */
+
+.admin-coffee-cancel {
+    min-height: 43px;
+
+    padding: 0 17px;
+
+    border: 1px solid #ded2c9;
+
+    border-radius: 9px;
+
+    background-color: #ffffff;
+
+    color: #6e4937;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.admin-coffee-cancel:hover {
+    background-color: #faf6f2;
+}
+
+
+/* =========================
+   SAVE
+========================= */
+
+.admin-coffee-save {
+    min-height: 43px;
+
+    padding: 0 17px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background-color: #6e4937;
+
+    color: #ffffff;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 12px rgba(110, 73, 55, 0.16);
+}
+
+.admin-coffee-save:hover {
+    background-color: #583a2c;
+}
+
+.admin-coffee-save:disabled,
+.admin-coffee-cancel:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .admin-coffees-page {
+        padding: 40px 28px 60px;
+    }
+
+    .admin-coffees-controls {
+        flex-wrap: wrap;
+    }
+
+    .admin-coffees-search {
+        flex: 1 1 260px;
+    }
+
+    .admin-coffees-filter-icon {
+        display: none;
+    }
+
+    .admin-coffees-controls select {
+        flex: 1 1 150px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .admin-coffees-page {
+        padding: 28px 18px 45px;
+    }
+
+    .admin-coffees-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        margin-bottom: 22px;
+    }
+
+    .admin-coffees-header h1 {
+        font-size: 25px;
+    }
+
+    .admin-coffees-description {
+        font-size: 13px;
+    }
+
+    .admin-add-coffee-button {
+        width: 100%;
+    }
+
+    .admin-coffees-controls {
+        padding: 12px;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+    }
+
+    .admin-coffees-search {
+        width: 100%;
+
+        min-width: 0;
+
+        grid-column: 1 / -1;
+    }
+
+    .admin-coffees-controls select {
+        width: 100%;
+    }
+
+    .admin-coffees-sort-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .admin-coffees-sort {
+        width: 100%;
+
+        flex-wrap: wrap;
+    }
+
+    .admin-coffees-sort select {
+        flex: 1;
+    }
+
+    .admin-reset-filters {
+        margin-left: auto;
+    }
+
+    .admin-coffees-card {
+        border-radius: 12px;
+    }
+
+    .admin-coffee-modal-overlay {
+        padding: 15px;
+    }
+
+    .admin-coffee-modal {
+        max-height: calc(100vh - 30px);
+
+        border-radius: 14px;
+    }
+
+    .admin-coffee-form-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .admin-coffee-field-full {
+        grid-column: auto;
+    }
+
+    .admin-coffee-modal-header {
+        padding: 19px 20px;
+    }
+
+    .admin-coffee-form {
+        padding: 20px;
+    }
+
+    .admin-coffee-modal-actions {
+        flex-direction: column-reverse;
+    }
+
+    .admin-coffee-cancel,
+    .admin-coffee-save {
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px) {
+
+    .admin-coffees-page {
+        padding-left: 14px;
+
+        padding-right: 14px;
+    }
+
+    .admin-coffees-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-coffees-search {
+        grid-column: auto;
+    }
+
+    .admin-coffees-sort {
+        gap: 6px;
+    }
+
+    .admin-sort-direction,
+    .admin-reset-filters {
+        padding-left: 9px;
+
+        padding-right: 9px;
+    }
+}
+/* =========================
+   RIGHT SIDE TOAST
+========================= */
+
+.admin-coffee-toast {
+    position: fixed;
+
+    top: 85px;
+
+    right: 25px;
+
+    z-index: 11000;
+
+    width: min(360px, calc(100vw - 40px));
+
+    min-height: 70px;
+
+    padding: 14px 15px;
+
+    border: 1px solid #e5d8ce;
+
+    border-radius: 12px;
+
+    background-color: #ffffff;
+
+    color: #2b1d16;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    box-shadow:
+        0 12px 30px rgba(43, 29, 22, 0.14);
+
+    animation:
+        adminCoffeeToastIn
+        0.3s ease forwards;
+}
+
+
+/* =========================
+   TOAST ICON
+========================= */
+
+.admin-coffee-toast-icon {
+    width: 36px;
+
+    height: 36px;
+
+    border-radius: 50%;
+
+    background-color: #f0e8df;
+
+    color: #6e4937;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   TOAST CONTENT
+========================= */
+
+.admin-coffee-toast-content {
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.admin-coffee-toast-content strong {
+    color: #3b2a22;
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   UNDO BUTTON
+========================= */
+
+.admin-coffee-toast-undo {
+    width: fit-content;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #6e4937;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.admin-coffee-toast-undo:hover {
+    color: #4f3326;
+
+    text-decoration: underline;
+}
+
+.admin-coffee-toast-undo:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.admin-coffee-toast-close {
+    width: 28px;
+
+    height: 28px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #8d7b70;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.admin-coffee-toast-close:hover {
+    background-color: #f5eee8;
+
+    color: #5f4234;
+}
+
+
+/* =========================
+   TOAST ANIMATION
+========================= */
+
+@keyframes adminCoffeeToastIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+
+/* =========================
+   TOAST MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .admin-coffee-toast {
+        top: 70px;
+
+        right: 18px;
+
+        width: calc(100vw - 36px);
+    }
+}

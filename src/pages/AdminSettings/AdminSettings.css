@@ -1,0 +1,855 @@
+/* =========================
+   ADMIN SETTINGS PAGE
+========================= */
+
+.admin-settings-page {
+    min-height: 100vh;
+
+    padding: 45px 40px 70px;
+
+    background-color: #f8f4ef;
+
+    color: #2b1d16;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.admin-settings-header {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto 30px;
+}
+
+
+/* =========================
+   HEADER TEXT
+========================= */
+
+.admin-settings-label {
+    margin: 0 0 8px;
+
+    color: #a2765d;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+
+    text-transform: uppercase;
+}
+
+.admin-settings-header h1 {
+    margin: 0;
+
+    color: #2b1d16;
+
+    font-size: 31px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+.admin-settings-description {
+    margin: 8px 0 0;
+
+    color: #806f66;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   SETTINGS CARD
+========================= */
+
+.admin-settings-card {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto 24px;
+
+    border: 1px solid #eadfd5;
+
+    border-radius: 18px;
+
+    background-color: #ffffff;
+
+    box-shadow:
+        0 6px 22px rgba(43, 29, 22, 0.05);
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   LAST CARD
+========================= */
+
+.admin-settings-card:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.admin-settings-card-header {
+    padding: 27px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border-bottom: 1px solid #eee5de;
+
+    background-color: #ffffff;
+}
+
+
+/* =========================
+   CARD ICON
+========================= */
+
+.admin-settings-profile-icon {
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 14px;
+
+    background-color: #f2e8df;
+
+    color: #79533f;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.admin-settings-profile-icon svg {
+    width: 25px;
+
+    height: 25px;
+}
+
+
+/* =========================
+   CARD HEADER TEXT
+========================= */
+
+.admin-settings-card-header h2 {
+    margin: 0 0 5px;
+
+    color: #2b1d16;
+
+    font-size: 18px;
+
+    font-weight: 650;
+
+    line-height: 1.3;
+}
+
+.admin-settings-card-header p {
+    margin: 0;
+
+    color: #8b796f;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.admin-settings-form {
+    padding: 30px;
+}
+
+
+/* =========================
+   FORM FIELD
+========================= */
+
+.admin-settings-field {
+    margin-bottom: 22px;
+}
+
+.admin-settings-field:last-of-type {
+    margin-bottom: 0;
+}
+
+.admin-settings-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #3b2a22;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   INPUT WRAPPER
+========================= */
+
+.admin-settings-input-wrapper {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid #ded2c9;
+
+    border-radius: 10px;
+
+    background-color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* =========================
+   INPUT WRAPPER ICON
+========================= */
+
+.admin-settings-input-wrapper > svg {
+    width: 18px;
+
+    height: 18px;
+
+    color: #9a7c6b;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   INPUT FOCUS
+========================= */
+
+.admin-settings-input-wrapper:focus-within {
+    border-color: #a2765d;
+
+    background-color: #fffdfb;
+
+    box-shadow:
+        0 0 0 3px rgba(162, 118, 93, 0.1);
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.admin-settings-input-wrapper input {
+    width: 100%;
+
+    min-width: 0;
+
+    height: 46px;
+
+    padding: 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #2b1d16;
+
+    font-family: inherit;
+
+    font-size: 14px;
+}
+
+.admin-settings-input-wrapper input::placeholder {
+    color: #b0a199;
+}
+
+.admin-settings-input-wrapper input:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.7;
+}
+
+
+/* =========================
+   PASSWORD TOGGLE
+========================= */
+
+.admin-password-toggle {
+    width: 30px;
+
+    height: 30px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: transparent;
+
+    color: #9a7c6b;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.admin-password-toggle:hover {
+    background-color: #f5eee8;
+
+    color: #6e4937;
+}
+
+.admin-password-toggle:active {
+    background-color: #eee3da;
+}
+
+.admin-password-toggle:focus-visible {
+    outline: 2px solid rgba(162, 118, 93, 0.35);
+
+    outline-offset: 2px;
+}
+
+.admin-password-toggle svg {
+    width: 18px;
+
+    height: 18px;
+}
+
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.admin-settings-success {
+    margin-top: 20px;
+
+    padding: 12px 14px;
+
+    border: 1px solid #cfe5d2;
+
+    border-radius: 9px;
+
+    background-color: #f1f9f2;
+
+    color: #4c8057;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.admin-settings-form-error {
+    margin-top: 20px;
+
+    padding: 12px 14px;
+
+    border: 1px solid #efd1ca;
+
+    border-radius: 9px;
+
+    background-color: #fff4f2;
+
+    color: #a24e42;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FORM ACTIONS
+========================= */
+
+.admin-settings-actions {
+    margin-top: 28px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid #eee5de;
+
+    display: flex;
+
+    justify-content: flex-end;
+}
+
+
+/* =========================
+   SAVE / UPDATE BUTTON
+========================= */
+
+.admin-settings-save {
+    min-height: 45px;
+
+    padding: 0 19px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #6e4937;
+
+    color: #ffffff;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 12px rgba(110, 73, 55, 0.18);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-settings-save:hover {
+    background-color: #583a2c;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 16px rgba(110, 73, 55, 0.23);
+}
+
+.admin-settings-save:active {
+    transform: translateY(0);
+}
+
+.admin-settings-save:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+.admin-settings-save svg {
+    width: 18px;
+
+    height: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.admin-settings-loading {
+    min-height: 70vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #6e4937;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   ERROR PAGE
+========================= */
+
+.admin-settings-error {
+    width: min(500px, calc(100% - 40px));
+
+    margin: 100px auto;
+
+    padding: 20px 22px;
+
+    border: 1px solid #efd1ca;
+
+    border-radius: 12px;
+
+    background-color: #fff4f2;
+
+    color: #a24e42;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+    .admin-settings-page {
+        padding: 38px 28px 55px;
+    }
+
+    .admin-settings-header,
+    .admin-settings-card {
+        max-width: 100%;
+    }
+
+    .admin-settings-header h1 {
+        font-size: 28px;
+    }
+
+    .admin-settings-card-header {
+        padding: 25px 27px;
+    }
+
+    .admin-settings-form {
+        padding: 27px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .admin-settings-page {
+        padding: 28px 18px 45px;
+    }
+
+    .admin-settings-header {
+        margin-bottom: 24px;
+    }
+
+    .admin-settings-header h1 {
+        font-size: 24px;
+    }
+
+    .admin-settings-description {
+        font-size: 13px;
+    }
+
+    .admin-settings-card {
+        margin-bottom: 18px;
+
+        border-radius: 14px;
+    }
+
+    .admin-settings-card-header {
+        padding: 21px 20px;
+
+        gap: 12px;
+    }
+
+    .admin-settings-profile-icon {
+        width: 45px;
+
+        height: 45px;
+
+        border-radius: 12px;
+    }
+
+    .admin-settings-profile-icon svg {
+        width: 22px;
+
+        height: 22px;
+    }
+
+    .admin-settings-card-header h2 {
+        font-size: 16px;
+    }
+
+    .admin-settings-card-header p {
+        font-size: 11px;
+    }
+
+    .admin-settings-form {
+        padding: 22px 20px;
+    }
+
+    .admin-settings-field {
+        margin-bottom: 19px;
+    }
+
+    .admin-settings-field label {
+        font-size: 12px;
+    }
+
+    .admin-settings-input-wrapper {
+        min-height: 46px;
+
+        padding-left: 12px;
+
+        padding-right: 10px;
+
+        gap: 9px;
+    }
+
+    .admin-settings-input-wrapper input {
+        height: 44px;
+
+        font-size: 13px;
+    }
+
+    .admin-settings-input-wrapper > svg {
+        width: 17px;
+
+        height: 17px;
+    }
+
+    .admin-password-toggle {
+        width: 29px;
+
+        height: 29px;
+    }
+
+    .admin-settings-success,
+    .admin-settings-form-error {
+        font-size: 12px;
+    }
+
+    .admin-settings-actions {
+        margin-top: 24px;
+
+        padding-top: 20px;
+    }
+
+    .admin-settings-save {
+        width: 100%;
+
+        min-height: 44px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .admin-settings-page {
+        padding-left: 14px;
+
+        padding-right: 14px;
+    }
+
+    .admin-settings-card-header {
+        padding: 19px 16px;
+
+        gap: 10px;
+    }
+
+    .admin-settings-profile-icon {
+        width: 42px;
+
+        height: 42px;
+    }
+
+    .admin-settings-card-header h2 {
+        font-size: 15px;
+    }
+
+    .admin-settings-card-header p {
+        font-size: 10px;
+    }
+
+    .admin-settings-form {
+        padding: 20px 16px;
+    }
+
+    .admin-settings-password-toggle {
+        width: 27px;
+
+        height: 27px;
+    }
+}
+/* =========================
+   ADMIN SETTINGS TOAST
+========================= */
+
+.admin-settings-toast {
+    position: fixed;
+    top: 85px;
+    right: 25px;
+    z-index: 11000;
+
+    width: min(360px, calc(100vw - 40px));
+    min-height: 70px;
+
+    padding: 14px 15px;
+
+    border: 1px solid #e5d8ce;
+    border-radius: 12px;
+
+    background-color: #ffffff;
+    color: #2b1d16;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    box-shadow:
+        0 12px 30px rgba(43, 29, 22, 0.14);
+
+    animation:
+        adminSettingsToastIn 0.3s ease forwards;
+}
+
+.admin-settings-toast-icon {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    background-color: #f0e8df;
+    color: #6e4937;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.admin-settings-toast-content {
+    min-width: 0;
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+}
+
+.admin-settings-toast-content strong {
+    color: #3b2a22;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+.admin-settings-toast-close {
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 7px;
+
+    background: transparent;
+    color: #8d7b70;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.admin-settings-toast-close:hover {
+    background-color: #f5eee8;
+    color: #5f4234;
+}
+
+@keyframes adminSettingsToastIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .admin-settings-toast {
+        top: 70px;
+        right: 18px;
+        width: calc(100vw - 36px);
+    }
+}

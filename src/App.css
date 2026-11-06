@@ -1,0 +1,71 @@
+.app-main {
+  width: 100%;
+}
+
+/* Hero */
+
+.hero-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 30px 50px;
+}
+
+.hero-section h1 {
+  font-size: 52px;
+  color: #2b1d16;
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  font-size: 20px;
+  color: #6b5a50;
+  margin-bottom: 25px;
+}
+
+
+/* Coffee Section */
+
+.coffee-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 30px 70px;
+}
+
+.coffee-section h2 {
+  font-size: 32px;
+  color: #2b1d16;
+  margin-bottom: 30px;
+}
+
+.coffee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .coffee-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 50px 20px 35px;
+  }
+
+  .hero-section h1 {
+    font-size: 38px;
+  }
+
+  .coffee-section {
+    padding: 20px 20px 50px;
+  }
+
+  .coffee-grid {
+    grid-template-columns: 1fr;
+  }
+}

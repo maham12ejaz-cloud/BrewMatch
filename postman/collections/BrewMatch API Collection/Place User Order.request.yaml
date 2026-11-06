@@ -1,0 +1,42 @@
+$kind: http-request
+description: ""
+url: "\thttp://localhost:5000/api/orders/user"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"customer_name\": \"Test User\",\r
+
+    \    \"customer_email\": \"test@example.com\",\r
+
+    \    \"customer_phone\": \"03001234567\",\r
+
+    \    \"delivery_address\": \"Multan, Pakistan\",\r
+
+    \    \"items\": [\r
+
+    \        {\r
+
+    \            \"coffee_id\": 1,\r
+
+    \            \"quantity\": 1\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"coffee_id\": 3,\r
+
+    \            \"quantity\": 2\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0e6h}}"
+order: 12000

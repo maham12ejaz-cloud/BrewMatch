@@ -1,0 +1,773 @@
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.home-page {
+  min-height: 80vh;
+  background-color: #f8f4ef;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+  min-height: 540px;
+  padding: 90px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(248, 244, 239, 0.90),
+      rgba(248, 244, 239, 0.94)
+    ),
+    url('/images/coffee-hero.jpg');
+
+  background-size: cover;
+  background-position: center;
+
+  border-bottom: 1px solid #eee3d7;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  width: 100%;
+  max-width: 780px;
+
+  opacity: 0;
+
+  transform: translateY(25px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+
+/* =========================
+   HERO VISIBLE STATE
+========================= */
+
+.hero-section.hero-visible .hero-content {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================
+   HERO LABEL
+========================= */
+
+.hero-label {
+  display: inline-block;
+
+  padding: 8px 17px;
+
+  background-color: #f1e5d8;
+  color: #6f4e37;
+
+  border: 1px solid #e6d7c8;
+  border-radius: 30px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  margin-bottom: 22px;
+
+  opacity: 0;
+
+  transform: translateY(15px);
+
+  transition:
+    opacity 0.6s ease 0.1s,
+    transform 0.6s ease 0.1s;
+}
+
+
+/* =========================
+   HERO LABEL ANIMATION
+========================= */
+
+.hero-section.hero-visible .hero-label {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================
+   HERO HEADING
+========================= */
+
+.hero-content h1 {
+  margin: 0 0 20px;
+
+  color: #2b1d16;
+
+  font-size: 58px;
+  line-height: 1.12;
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+
+  opacity: 0;
+
+  transform: translateY(18px);
+
+  transition:
+    opacity 0.7s ease 0.15s,
+    transform 0.7s ease 0.15s;
+}
+
+
+/* =========================
+   HERO HEADING ANIMATION
+========================= */
+
+.hero-section.hero-visible .hero-content h1 {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================
+   HERO HEADING SPAN
+========================= */
+
+.hero-content h1 span {
+  display: block;
+
+  color: #6f4e37;
+}
+
+
+/* =========================
+   HERO DESCRIPTION
+========================= */
+
+.hero-content p {
+  max-width: 650px;
+
+  margin: 0 auto 32px;
+
+  color: #6b5a50;
+
+  font-size: 17px;
+  line-height: 1.8;
+
+  opacity: 0;
+
+  transform: translateY(18px);
+
+  transition:
+    opacity 0.7s ease 0.25s,
+    transform 0.7s ease 0.25s;
+}
+
+
+/* =========================
+   HERO DESCRIPTION ANIMATION
+========================= */
+
+.hero-section.hero-visible .hero-content p {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 14px;
+
+  opacity: 0;
+
+  transform: translateY(18px);
+
+  transition:
+    opacity 0.7s ease 0.35s,
+    transform 0.7s ease 0.35s;
+}
+
+
+/* =========================
+   HERO BUTTON ANIMATION
+========================= */
+
+.hero-section.hero-visible .hero-buttons {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================
+   HERO LINKS
+========================= */
+
+.hero-buttons a {
+  text-decoration: none;
+}
+
+
+/* =========================
+   BROWSE BUTTON
+========================= */
+
+.browse-button {
+  padding: 12px 25px;
+
+  border: 2px solid #6f4e37;
+  border-radius: 8px;
+
+  background-color: transparent;
+  color: #6f4e37;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.browse-button:hover {
+  background-color: #6f4e37;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(43, 29, 22, 0.14);
+}
+
+.browse-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   COFFEE SECTION
+========================= */
+
+.coffee-section {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 90px 30px;
+}
+
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.section-header {
+  max-width: 700px;
+
+  margin: 0 auto 48px;
+
+  text-align: center;
+}
+
+.section-header > span {
+  display: inline-block;
+
+  color: #6f4e37;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.2px;
+}
+
+.section-header h2 {
+  margin: 10px 0 13px;
+
+  color: #2b1d16;
+
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.section-header p {
+  margin: 0;
+
+  color: #6b5a50;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   COFFEE GRID
+========================= */
+
+.coffee-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+
+/* =========================
+   VIEW ALL
+========================= */
+
+.view-all-container {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 45px;
+}
+
+.view-all-container a {
+  text-decoration: none;
+}
+
+.view-all-button {
+  padding: 12px 26px;
+
+  border: 1px solid #6f4e37;
+  border-radius: 8px;
+
+  background-color: #ffffff;
+  color: #6f4e37;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.view-all-button:hover {
+  background-color: #6f4e37;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(43, 29, 22, 0.12);
+}
+
+.view-all-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how-it-works-section {
+  width: 100%;
+
+  padding: 90px 30px;
+
+  background-color: #faf7f2;
+
+  border-top: 1px solid #eee3d7;
+  border-bottom: 1px solid #eee3d7;
+}
+
+.steps-container {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* =========================
+   STEP CARD
+========================= */
+
+.step-card {
+  padding: 30px 25px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eee3d7;
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow:
+    0 7px 24px rgba(43, 29, 22, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 13px 30px rgba(43, 29, 22, 0.10);
+}
+
+
+/* =========================
+   STEP NUMBER
+========================= */
+
+.step-number {
+  width: 52px;
+  height: 52px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: #f1e5d8;
+  color: #6f4e37;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.step-card h3 {
+  margin: 0 0 12px;
+
+  color: #2b1d16;
+
+  font-size: 20px;
+}
+
+.step-card p {
+  margin: 0;
+
+  color: #6b5a50;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.home-cta-section {
+  padding: 90px 30px;
+
+  background-color: #6f4e37;
+
+  text-align: center;
+}
+
+.home-cta-content {
+  width: 100%;
+  max-width: 700px;
+
+  margin: 0 auto;
+}
+
+.home-cta-content > span {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #ead8c7;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.2px;
+}
+
+.home-cta-content h2 {
+  margin: 0 0 15px;
+
+  color: #ffffff;
+
+  font-size: 38px;
+  line-height: 1.25;
+}
+
+.home-cta-content p {
+  max-width: 580px;
+
+  margin: 0 auto 28px;
+
+  color: #f1e5d8;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.home-cta-content .custom-button {
+  background-color: #ffffff;
+  color: #6f4e37;
+}
+
+.home-cta-content .custom-button:hover {
+  background-color: #f8f4ef;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .hero-section {
+    min-height: 500px;
+    padding: 75px 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .coffee-section {
+    padding: 75px 25px;
+  }
+
+  .coffee-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .steps-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .step-card:last-child {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    max-width: 500px;
+
+    margin: 0 auto;
+  }
+
+  .home-cta-section {
+    padding: 75px 25px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero-section {
+    min-height: 500px;
+
+    padding: 65px 20px;
+  }
+
+  .hero-label {
+    padding: 7px 14px;
+
+    margin-bottom: 18px;
+
+    font-size: 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+
+    letter-spacing: -0.7px;
+  }
+
+  .hero-content p {
+    margin-bottom: 26px;
+
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 10px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+  }
+
+  .hero-buttons .custom-button,
+  .browse-button {
+    width: 100%;
+  }
+
+
+  /* =========================
+     COFFEE SECTION
+  ========================= */
+
+  .coffee-section {
+    padding: 65px 20px;
+  }
+
+  .section-header {
+    margin-bottom: 35px;
+  }
+
+  .section-header h2 {
+    font-size: 29px;
+  }
+
+  .section-header p {
+    font-size: 14px;
+  }
+
+  .coffee-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .view-all-container {
+    margin-top: 35px;
+  }
+
+
+  /* =========================
+     HOW IT WORKS
+  ========================= */
+
+  .how-it-works-section {
+    padding: 65px 20px;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .step-card:last-child {
+    grid-column: auto;
+
+    max-width: none;
+  }
+
+
+  /* =========================
+     CTA
+  ========================= */
+
+  .home-cta-section {
+    padding: 65px 20px;
+  }
+
+  .home-cta-content h2 {
+    font-size: 29px;
+  }
+
+  .home-cta-content p {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .section-header h2 {
+    font-size: 26px;
+  }
+
+  .home-cta-content h2 {
+    font-size: 26px;
+  }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-content,
+  .hero-label,
+  .hero-content h1,
+  .hero-content p,
+  .hero-buttons {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  .browse-button,
+  .view-all-button,
+  .step-card {
+    transition: none;
+  }
+}
